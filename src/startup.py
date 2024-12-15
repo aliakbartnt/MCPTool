@@ -4,7 +4,7 @@ import time
 import sys
 
 from src.decoration.print_banner import print_banner
-from src.updater.mcptool_updater import MCPToolUpdater
+#from src.updater.mcptool_updater import MCPToolUpdater
 from src.updater.proxy_updater import ProxyUpdater
 from src.menu.command_input import CommandInput
 from src.managers.json_manager import JsonManager
@@ -39,7 +39,7 @@ class Startup():
             JsonManager.save_json(settings, './config/config.json')
 
         # Check if a new version of MCPTool is available and display an update banner if necessary.
-        MCPToolUpdater.show_banner_update()
+        #MCPToolUpdater.show_banner_update()
 
         # Check for proxy server updates.
         if JsonManager.get(['proxyConfig', 'updateProxy']):
@@ -81,4 +81,3 @@ class Startup():
             pass
 
         CommandInput.command_input(api_process)
-
